@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+      <title>Pusher Test</title>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">''</script>
+          <script src="https://js.pusher.com/2.2/pusher.min.js"></script>
+            <script>
+                    var pusher = new Pusher('377af59840070296a18a', {
+                              encrypted: true
+                                  });
+                                      var channel =
+                                      pusher.subscribe('test_channel');
+                                          channel.bind('my_event',
+                                          function(data) {
+                                                    $('#list').prepend("<p>"+
+                                                    data.message + "</p>")
+                                                        });
+                                                          </script>
+                                                      </head>
+                                                      <body>
+                                                            <h1>Project
+                                                                Eyes</h1>
+                                                            <div
+                                                                  id="list"></div>
+                                                          </body>
+
